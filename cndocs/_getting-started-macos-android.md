@@ -128,6 +128,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 ```shell
 npx react-native@latest init AwesomeProject
 ```
+> npx 可以在不安装react-native的情况下使用react-native
 
 如果你是想把 React Native 集成到现有的原生项目中，则步骤完全不同，请参考[集成到现有原生应用](integration-with-existing-apps.md)。
 
@@ -140,6 +141,15 @@ npx react-native@X.XX.X init AwesomeProject --version X.XX.X
 ```
 
 还可以使用`--template`参数来使用一些社区提供的模板。
+
+## 安装Node依赖包
+
+```
+cd AwesomeProject
+yarn install
+```
+> 这一步独立运行可以确保使用Android Studio加载项目下的"android"目录时自动编译顺利通过，否则会报找不到com.facebook.react.PackageList之类的错误。
+
 
 ## 准备 Android 设备
 
